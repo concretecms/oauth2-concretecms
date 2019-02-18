@@ -85,7 +85,7 @@ class Concrete5 extends AbstractProvider
     {
         if ($response->getStatusCode() >= 400) {
             throw new IdentityProviderException(
-                $response->getReasonPhrase(),
+                $data['error'] ?: $response->getReasonPhrase(),
                 $response->getStatusCode(),
                 $response
             );
