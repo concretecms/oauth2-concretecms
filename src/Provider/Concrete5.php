@@ -21,6 +21,15 @@ class Concrete5 extends AbstractProvider
     }
 
     /**
+     * @return string
+     */
+    public function getClientId()
+    {
+        return $this->clientId;
+    }
+
+    
+    /**
      * Returns the Authorization URL
      *
      * @return string
