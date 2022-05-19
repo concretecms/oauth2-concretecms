@@ -1,5 +1,5 @@
 {
-  "name": "concrete5/oauth2-concrete5",
+  "name": "concretecms/oauth2-concretecms",
   "description": "concrete5 OAuth2 Client Provider for PHP League OAuth2-Client",
   "minimum-stability": "dev",
   "license": "MIT",
