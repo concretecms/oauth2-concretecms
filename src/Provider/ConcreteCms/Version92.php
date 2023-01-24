@@ -111,6 +111,6 @@ class Version92 extends AbstractProvider
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        return new Concrete5ResourceOwner($response);
+        return new ConcreteCmsResourceOwner($response);
     }
 }
