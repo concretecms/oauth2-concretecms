@@ -1,6 +1,6 @@
 <?php
 
-namespace Concrete\OAuth2\Client\Provider;
+namespace Concrete\OAuth2\Client\Provider\ConcreteCms;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
@@ -9,12 +9,7 @@ use League\OAuth2\Client\Token\AccessToken;
 use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
-/**
- * @deprecated
- * Note: This class is for use with Concrete CMS 8.5 - 9.1.3. 9.2 and greater should use ConcreteCms
- * @package Concrete\OAuth2\Client\Provider
- */
-class Concrete5 extends AbstractProvider
+class Version92 extends AbstractProvider
 {
     use BearerAuthorizationTrait;
 
@@ -63,7 +58,7 @@ class Concrete5 extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return $this->getBaseUrl() . '/ccm/api/v1/account/info';
+        return $this->getBaseUrl() . '/ccm/api/1.0/account';
     }
 
     /**
@@ -73,7 +68,7 @@ class Concrete5 extends AbstractProvider
      */
     protected function getDefaultScopes()
     {
-        return ['account', 'openid'];
+        return ['account:info', 'openid'];
     }
 
     /**
