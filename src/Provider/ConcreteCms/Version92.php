@@ -68,7 +68,7 @@ class Version92 extends AbstractProvider
      */
     protected function getDefaultScopes()
     {
-        return ['account:info', 'openid'];
+        return ['account:read', 'openid'];
     }
 
     /**
